@@ -1,8 +1,8 @@
 <?php
 /**
-Created By RintoD :D
-Wordpress XMLRPC BruteForce
-Install Threads https://blog.programster.org/install-php-7-0-with-pthreads-on-ubuntu-16.04
+ *Created By RintoD :D
+ *Wordpress XMLRPC BruteForce
+ *Install Threads https://blog.programster.org/install-php-7-0-with-pthreads-on-ubuntu-16.04
 */
 class Rintod extends Threaded{
   
