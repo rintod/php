@@ -58,7 +58,7 @@ class Rintod extends Threaded{
     }
   }
 }
-$pool = new Pool(4);
+$pool = new Pool(4); // Change value for fast result :v
 echo "\033[0;34m[!] Wordpress XMLRPC Brute Force\n\033[0m";
 echo "\033[0;34m[!] Please Put host without /xmlrpc.php :D\n\033[0m";
 echo "\033[0;34m[!] Created By Con7ext\n\033[0m";
