@@ -67,7 +67,10 @@ $user = readline("Put User: ");
 $pass = readline("Put List: ");
 $pwd = explode("\n", file_get_contents($pass));
 foreach($pwd as $pwds){
-  $pool->submit(new Rintod($host, $user, $pwds));
+  $mek = $pool->submit(new Rintod($host, $user, $pwds));
+  if(preg_match("/Success/i", $mek)){
+    break;
+  }
 }
 while ($pool->collect());
 $pool->shutdown();
