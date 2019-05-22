@@ -93,15 +93,10 @@ namespace Rinto{
 				"body" => $body
 				];
 		}
-		function rePost($url, $data, $fol = null){
+		function rePost($url, $data){
 			curl_setopt ($this->ch, CURLOPT_POST, 1);
 			curl_setopt ($this->ch, CURLOPT_POSTFIELDS, $data);
-			if($fol && !empty($fol)){
-				return $this->reQuest($url, $data);
-			}
-			else{
-				return $this->reQuest($url);
-			}
+			return $this->reQuest($url, $data);	
 		}
 	}
 	parse_str(implode("&", array_slice($argv, 1)), $_GET);
