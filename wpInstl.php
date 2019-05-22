@@ -2,7 +2,7 @@
 /// RINTOD
 /// Usage: php file.php list=listsite.txt user=user pass=password email=email@cm.com
 /// if u want to save file just add ding save=file.txt
-/// Wp install mass exploit ///
+/// Wp install mass exploit
 namespace Rinto{
 	class wpInstl{
 		public $url, $user, $pass, $email, $save, $ch, $cookie_jar, $payload, $lists;
