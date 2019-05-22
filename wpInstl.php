@@ -1,4 +1,7 @@
 <?php
+/// Coded By Con7ext
+/// usage : php file.php list=yourlist.txt user=user pass=pass email=email@wmd.com
+/// Save success result? just add save=file.txt
 namespace Rinto{
 	class wpInstl{
 		public $url, $user, $pass, $email, $save, $ch, $cookie_jar, $payload, $lists;
