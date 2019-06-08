@@ -3,6 +3,7 @@
 * @author Con7ext <kreonrinto@gmail.com>
 * GetCMS Mass Exploiter
 * php file.php list.txt
+* if u want manual exploit https://plantsec.blogspot.com/2019/06/getsimple-cms-unauthenticated-remote.html
 **/
 class getCMS{
   public $url;
